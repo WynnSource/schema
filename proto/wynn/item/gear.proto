@@ -1,0 +1,70 @@
+syntax = "proto3";
+package wynn.item;
+
+import "wynn/common/components.proto";
+import "wynn/common/enums.proto";
+
+message Gear {
+  enum GearType {
+    // Weapons
+    SPEAR = 0;
+    BOW = 1;
+    WAND = 2;
+    DAGGER = 3;
+    RELIK = 4;
+    // Armors
+    HELMET = 5;
+    CHESTPLATE = 6;
+    LEGGINGS = 7;
+    BOOTS = 8;
+    // Accessories
+    RING = 9;
+    BRACELET = 10;
+    NECKLACE = 11;
+  }
+
+  GearType type = 1;
+  wynn.common.Requirements requirements = 2;
+
+  oneof state {
+    UnidentifiedGear unidentified = 10;
+    IdentifiedGear identified = 11;
+    CraftedGear crafted = 12;
+  }
+
+  oneof base_stats {
+    WeaponStats weapon_stats = 20;
+    ArmorStats armor_stats = 21;
+  }
+}
+
+message UnidentifiedGear {
+  repeated wynn.common.Identification identifications = 1;
+}
+
+message IdentifiedGear {
+  repeated wynn.common.Identification identifications = 3;
+  repeated wynn.common.PowderSlot powders = 4;
+  wynn.common.Shiny shiny = 5;
+  int32 rerolls = 6;
+}
+
+message CraftedGear {
+  string author = 1;
+  string lore = 2;
+  int32 durability_current = 3;
+  int32 durability_max = 4;
+
+  repeated wynn.common.Identification identifications = 5;
+  repeated wynn.common.PowderSlot powders = 6;
+}
+
+message WeaponStats {
+  wynn.common.AttackSpeed attack_speed = 1;
+  repeated wynn.common.DamageRange damages = 2;
+}
+
+message ArmorStats {
+  int32 health = 1;
+  repeated wynn.common.Defense defenses = 2;
+}

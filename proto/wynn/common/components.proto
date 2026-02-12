@@ -1,0 +1,48 @@
+syntax = "proto3";
+package wynn.common;
+
+import "wynn/common/enums.proto";
+
+message DamageRange {
+  Element element = 1;
+  int32 min = 2;
+  int32 max = 3;
+}
+
+message Defense {
+  Element element = 1;
+  int32 value = 2;
+}
+
+message Identification {
+  string id = 1;
+  int32 base_val = 2;
+  int32 roll = 3;
+  int32 final_val = 4;
+}
+
+message Requirements {
+  int32 level = 1;
+  ClassType class_req = 2;
+  int32 strength_req = 3;
+  int32 dexterity_req = 4;
+  int32 intelligence_req = 5;
+  int32 defense_req = 6;
+  int32 agility_req = 7;
+}
+
+message Powder {
+  Element element = 1;
+  int32 level = 2;
+}
+
+message PowderSlot {
+  bool active = 1;
+  Powder powder = 2;
+}
+
+message Shiny {
+  string id = 1;
+  int32 value = 2;
+  int32 roll = 3;
+}

@@ -1,0 +1,18 @@
+syntax = "proto3";
+package wynn;
+
+import "wynn/common/enums.proto";
+import "wynn/item/consumable.proto";
+import "wynn/item/gear.proto";
+
+message WynnItem {
+  string name = 1;
+
+  wynn.common.Rarity rarity = 2;
+
+  oneof data {
+    wynn.item.Gear gear = 10;
+    wynn.item.Consumable consumable = 11;
+    // TODO support more item types
+  }
+}

@@ -1,0 +1,45 @@
+syntax = "proto3";
+package wynn.item;
+
+import "wynn/common/components.proto";
+
+message ConsumableCharge {
+  int32 current = 1;
+  int32 max = 2;
+}
+
+message Consumable {
+  int32 level = 1;
+  int32 duration = 2;
+  ConsumableCharge charge = 4;
+
+  oneof subtype {
+    CraftedConsumable crafted = 10;
+    HealingPotion healing_potion = 11;
+    ManaPotion mana_potion = 12;
+    XpPotion xp_potion = 13;
+    StatPotion stat_potion = 14;
+  }
+}
+
+message HealingPotion {
+  int32 health = 1;
+}
+
+message ManaPotion {
+  int32 mana = 1;
+}
+
+message XpPotion {
+  int32 xp = 1;
+}
+
+message StatPotion {
+  repeated wynn.common.Identification effects = 1;
+}
+
+message CraftedConsumable {
+  string author = 1;
+  string lore = 2;
+  repeated wynn.common.Identification effects = 3;
+}

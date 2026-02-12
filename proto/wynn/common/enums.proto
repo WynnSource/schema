@@ -1,0 +1,43 @@
+syntax = "proto3";
+
+package wynn.common;
+
+enum Rarity {
+  NONE = 0;
+  COMMON = 1;
+  UNIQUE = 2;
+  RARE = 3;
+  LEGENDARY = 4;
+  FABLED = 5;
+  MYTHIC = 6;
+  SET = 7; // Will get deleted in future updates
+  CRAFTED = 8;
+}
+
+enum Element {
+  NEUTRAL = 0;
+  EARTH = 1;
+  THUNDER = 2;
+  WATER = 3;
+  FIRE = 4;
+  AIR = 5;
+}
+
+enum ClassType {
+  ANY = 0;
+  WARRIOR = 1;
+  MAGE = 2;
+  ARCHER = 3;
+  ASSASSIN = 4;
+  SHAMAN = 5;
+}
+
+enum AttackSpeed {
+  SUPER_FAST = 0;
+  VERY_FAST = 1;
+  FAST = 2;
+  NORMAL = 3;
+  SLOW = 4;
+  VERY_SLOW = 5;
+  SUPER_SLOW = 6;
+}
