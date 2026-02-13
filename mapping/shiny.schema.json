@@ -1,0 +1,39 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "Shiny Stats Mapping",
+    "description": "Mapping for shiny stats.",
+    "type": "object",
+    "properties": {
+        "data": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "integer"
+                    },
+                    "key": {
+                        "type": "string"
+                    },
+                    "displayName": {
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "id",
+                    "key",
+                    "displayName"
+                ],
+                "additionalProperties": false
+            }
+        },
+        "lastUpdated": {
+            "type": "string",
+            "format": "date-time"
+        }
+    },
+    "required": [
+        "data",
+        "lastUpdated"
+    ]
+}

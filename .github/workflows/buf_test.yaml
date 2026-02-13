@@ -1,5 +1,5 @@
-name: Buf Breaking Change Check
-on: [pull_request]
+name: Buf Lint and Breaking Change Detection
+on: [pull_request, push]
 
 jobs:
   buf-breaking:
@@ -7,11 +7,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 0 
+          fetch-depth: 0
 
       - uses: bufbuild/buf-setup-action@v1
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: bufbuild/buf-lint-action@v1
 
       - uses: bufbuild/buf-breaking-action@v1
         with:

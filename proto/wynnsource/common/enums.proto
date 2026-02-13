@@ -51,10 +51,10 @@ enum Profession {
 
 enum Raid {
   RAID_UNSPECIFIED = 0;
-  RAID_NOTG = 1;
-  RAID_NOL = 2;
-  RAID_TCC = 3;
-  RAID_TNA = 4;
+  RAID_NOTG = 1; // Nest of the Grootslangs
+  RAID_NOL = 2; // Orphion's Nexus of Light
+  RAID_TCC = 3; // The Canyon Colossus
+  RAID_TNA = 4; // The Nameless Anomaly
 }
 
 enum IngredientRarity {

@@ -6,6 +6,21 @@ import "wynnsource/common/enums.proto";
 
 option java_package = "fyw.fyi.wynnsource.schema.item";
 
+enum ModifierPos {
+  MODIFIER_POS_UNSPECIFIED = 0;
+  MODIFIER_POS_UP = 1;
+  MODIFIER_POS_DOWN = 2;
+  MODIFIER_POS_LEFT = 3;
+  MODIFIER_POS_RIGHT = 4;
+  MODIFIER_POS_TOUCH = 5;
+  MODIFIER_POS_NO_TOUCH = 6;
+}
+
+message Modifier {
+  ModifierPos pos = 1;
+  int32 value = 2;
+}
+
 message Ingredient {
   int32 durability = 1;
   int32 duration = 2;
@@ -13,4 +28,5 @@ message Ingredient {
   wynnsource.common.IngredientRarity rarity = 4;
   repeated wynnsource.common.CraftedEffect effects = 5;
   repeated wynnsource.common.Profession professions = 6;
+  repeated Modifier modifiers = 7;
 }

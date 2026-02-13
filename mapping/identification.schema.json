@@ -1,0 +1,35 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "Identification Mapping",
+    "description": "Mapping for identification.",
+    "type": "object",
+    "properties": {
+        "data": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "integer"
+                    },
+                    "key": {
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "id",
+                    "key"
+                ],
+                "additionalProperties": false
+            }
+        },
+        "lastUpdated": {
+            "type": "string",
+            "format": "date-time"
+        }
+    },
+    "required": [
+        "data",
+        "lastUpdated"
+    ]
+}

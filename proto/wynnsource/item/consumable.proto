@@ -14,7 +14,6 @@ message ConsumableCharge {
 message ConsumableEffect {
   uint32 id = 1;
   int32 current_val = 2;
-  int32 duration = 3;
 }
 
 message Consumable {

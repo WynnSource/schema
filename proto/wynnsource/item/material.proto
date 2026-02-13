@@ -16,6 +16,5 @@ enum MaterialType {
 }
 
 message Material {
-  int32 level = 1;
-  MaterialType type = 2;
+  MaterialType type = 1;
 }

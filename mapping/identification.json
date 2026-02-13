@@ -1,123 +1,462 @@
 {
-  "1stSpellCost": 0,
-  "2ndSpellCost": 1,
-  "3rdSpellCost": 2,
-  "4thSpellCost": 3,
-  "airDamage": 4,
-  "airDefence": 5,
-  "airMainAttackDamage": 6,
-  "airSpellDamage": 7,
-  "damageFromMobs": 8,
-  "earthDamage": 9,
-  "earthDefence": 10,
-  "earthMainAttackDamage": 11,
-  "earthSpellDamage": 12,
-  "elementalDamage": 13,
-  "elementalDefence": 14,
-  "elementalDefense": 15,
-  "elementalSpellDamage": 16,
-  "exploding": 17,
-  "fireDamage": 18,
-  "fireDefence": 19,
-  "fireSpellDamage": 20,
-  "gatherSpeed": 21,
-  "gatherXpBonus": 22,
-  "healingEfficiency": 23,
-  "healthRegen": 24,
-  "healthRegenRaw": 25,
-  "jumpHeight": 26,
-  "knockback": 27,
-  "leveledLootBonus": 28,
-  "leveledXpBonus": 29,
-  "lifeSteal": 30,
-  "lootBonus": 31,
-  "lootQuality": 32,
-  "mainAttackDamage": 33,
-  "manaRegen": 34,
-  "manaSteal": 35,
-  "poison": 36,
-  "raw1stSpellCost": 37,
-  "raw2ndSpellCost": 38,
-  "raw3rdSpellCost": 39,
-  "raw4thSpellCost": 40,
-  "rawAgility": 41,
-  "rawAirDamage": 42,
-  "rawAirMainAttackDamage": 43,
-  "rawAirSpellDamage": 44,
-  "rawAttackSpeed": 45,
-  "rawDefence": 46,
-  "rawDexterity": 47,
-  "rawEarthDamage": 48,
-  "rawEarthSpellDamage": 49,
-  "rawElementalDamage": 50,
-  "rawElementalMainAttackDamage": 51,
-  "rawElementalSpellDamage": 52,
-  "rawFireDamage": 53,
-  "rawFireMainAttackDamage": 54,
-  "rawFireSpellDamage": 55,
-  "rawHealth": 56,
-  "rawIntelligence": 57,
-  "rawMainAttackDamage": 58,
-  "rawNeutralDamage": 59,
-  "rawNeutralSpellDamage": 60,
-  "rawSpellDamage": 61,
-  "rawStrength": 62,
-  "rawThunderDamage": 63,
-  "rawThunderMainAttackDamage": 64,
-  "rawThunderSpellDamage": 65,
-  "rawWaterDamage": 66,
-  "rawWaterMainAttackDamage": 67,
-  "rawWaterSpellDamage": 68,
-  "reflection": 69,
-  "slowEnemy": 70,
-  "soulPointRegen": 71,
-  "spellDamage": 72,
-  "sprint": 73,
-  "sprintRegen": 74,
-  "stealing": 75,
-  "thorns": 76,
-  "thunderDamage": 77,
-  "thunderDefence": 78,
-  "thunderMainAttackDamage": 79,
-  "thunderSpellDamage": 80,
-  "walkSpeed": 81,
-  "waterDamage": 82,
-  "waterDefence": 83,
-  "waterSpellDamage": 84,
-  "weakenEnemy": 85,
-  "xpBonus": 86,
-  "healing": 87,
-  "rawEarthMainAttackDamage": 88,
-  "agility": 89,
-  "baseAirDamage": 90,
-  "baseAirDefence": 91,
-  "baseDamage": 92,
-  "baseEarthDamage": 93,
-  "baseEarthDefence": 94,
-  "baseFireDamage": 95,
-  "baseFireDefence": 96,
-  "baseHealth": 97,
-  "baseThunderDamage": 98,
-  "baseThunderDefence": 99,
-  "baseWaterDamage": 100,
-  "baseWaterDefence": 101,
-  "damage": 102,
-  "defence": 103,
-  "dexterity": 104,
-  "elementalMainAttackDamage": 105,
-  "fireMainAttackDamage": 106,
-  "intelligence": 107,
-  "neutralDamage": 108,
-  "neutralMainAttackDamage": 109,
-  "rawDamage": 110,
-  "rawNeutralMainAttackDamage": 111,
-  "strength": 112,
-  "fireSpellDamageBonus": 113,
-  "thunderMeleeDamageBonusRaw": 114,
-  "maxMana": 115,
-  "neutralSpellDamage": 116,
-  "rawMaxMana": 117,
-  "mainAttackRange": 118,
-  "criticalDamageBonus": 119,
-  "mainAttackFireDamage": 120
+  "$schema": "./identification.schema.json",
+  "lastUpdated": "2026-02-13T22:33:33Z",
+  "data": [
+    {
+      "id": 0,
+      "key": "1stSpellCost"
+    },
+    {
+      "id": 1,
+      "key": "2ndSpellCost"
+    },
+    {
+      "id": 2,
+      "key": "3rdSpellCost"
+    },
+    {
+      "id": 3,
+      "key": "4thSpellCost"
+    },
+    {
+      "id": 4,
+      "key": "agility"
+    },
+    {
+      "id": 5,
+      "key": "airDamage"
+    },
+    {
+      "id": 6,
+      "key": "airDefence"
+    },
+    {
+      "id": 7,
+      "key": "airMainAttackDamage"
+    },
+    {
+      "id": 8,
+      "key": "airSpellDamage"
+    },
+    {
+      "id": 9,
+      "key": "baseAirDamage"
+    },
+    {
+      "id": 10,
+      "key": "baseAirDefence"
+    },
+    {
+      "id": 11,
+      "key": "baseDamage"
+    },
+    {
+      "id": 12,
+      "key": "baseEarthDamage"
+    },
+    {
+      "id": 13,
+      "key": "baseEarthDefence"
+    },
+    {
+      "id": 14,
+      "key": "baseFireDamage"
+    },
+    {
+      "id": 15,
+      "key": "baseFireDefence"
+    },
+    {
+      "id": 16,
+      "key": "baseHealth"
+    },
+    {
+      "id": 17,
+      "key": "baseThunderDamage"
+    },
+    {
+      "id": 18,
+      "key": "baseThunderDefence"
+    },
+    {
+      "id": 19,
+      "key": "baseWaterDamage"
+    },
+    {
+      "id": 20,
+      "key": "baseWaterDefence"
+    },
+    {
+      "id": 21,
+      "key": "criticalDamageBonus"
+    },
+    {
+      "id": 22,
+      "key": "damage"
+    },
+    {
+      "id": 23,
+      "key": "damageFromMobs"
+    },
+    {
+      "id": 24,
+      "key": "defence"
+    },
+    {
+      "id": 25,
+      "key": "dexterity"
+    },
+    {
+      "id": 26,
+      "key": "earthDamage"
+    },
+    {
+      "id": 27,
+      "key": "earthDefence"
+    },
+    {
+      "id": 28,
+      "key": "earthMainAttackDamage"
+    },
+    {
+      "id": 29,
+      "key": "earthSpellDamage"
+    },
+    {
+      "id": 30,
+      "key": "elementalDamage"
+    },
+    {
+      "id": 31,
+      "key": "elementalDefence"
+    },
+    {
+      "id": 32,
+      "key": "elementalMainAttackDamage"
+    },
+    {
+      "id": 33,
+      "key": "elementalSpellDamage"
+    },
+    {
+      "id": 34,
+      "key": "exploding"
+    },
+    {
+      "id": 35,
+      "key": "fireDamage"
+    },
+    {
+      "id": 36,
+      "key": "fireDefence"
+    },
+    {
+      "id": 37,
+      "key": "fireMainAttackDamage"
+    },
+    {
+      "id": 38,
+      "key": "fireSpellDamage"
+    },
+    {
+      "id": 39,
+      "key": "gatherSpeed"
+    },
+    {
+      "id": 40,
+      "key": "gatherXpBonus"
+    },
+    {
+      "id": 41,
+      "key": "healingEfficiency"
+    },
+    {
+      "id": 42,
+      "key": "healthRegen"
+    },
+    {
+      "id": 43,
+      "key": "healthRegenRaw"
+    },
+    {
+      "id": 44,
+      "key": "intelligence"
+    },
+    {
+      "id": 45,
+      "key": "jumpHeight"
+    },
+    {
+      "id": 46,
+      "key": "knockback"
+    },
+    {
+      "id": 47,
+      "key": "leveledLootBonus"
+    },
+    {
+      "id": 48,
+      "key": "leveledXpBonus"
+    },
+    {
+      "id": 49,
+      "key": "lifeSteal"
+    },
+    {
+      "id": 50,
+      "key": "lootBonus"
+    },
+    {
+      "id": 51,
+      "key": "lootQuality"
+    },
+    {
+      "id": 52,
+      "key": "mainAttackDamage"
+    },
+    {
+      "id": 53,
+      "key": "mainAttackRange"
+    },
+    {
+      "id": 54,
+      "key": "manaRegen"
+    },
+    {
+      "id": 55,
+      "key": "manaSteal"
+    },
+    {
+      "id": 56,
+      "key": "neutralDamage"
+    },
+    {
+      "id": 57,
+      "key": "neutralMainAttackDamage"
+    },
+    {
+      "id": 58,
+      "key": "neutralSpellDamage"
+    },
+    {
+      "id": 59,
+      "key": "poison"
+    },
+    {
+      "id": 60,
+      "key": "raw1stSpellCost"
+    },
+    {
+      "id": 61,
+      "key": "raw2ndSpellCost"
+    },
+    {
+      "id": 62,
+      "key": "raw3rdSpellCost"
+    },
+    {
+      "id": 63,
+      "key": "raw4thSpellCost"
+    },
+    {
+      "id": 64,
+      "key": "rawAgility"
+    },
+    {
+      "id": 65,
+      "key": "rawAirDamage"
+    },
+    {
+      "id": 66,
+      "key": "rawAirMainAttackDamage"
+    },
+    {
+      "id": 67,
+      "key": "rawAirSpellDamage"
+    },
+    {
+      "id": 68,
+      "key": "rawAttackSpeed"
+    },
+    {
+      "id": 69,
+      "key": "rawDamage"
+    },
+    {
+      "id": 70,
+      "key": "rawDefence"
+    },
+    {
+      "id": 71,
+      "key": "rawDexterity"
+    },
+    {
+      "id": 72,
+      "key": "rawEarthDamage"
+    },
+    {
+      "id": 73,
+      "key": "rawEarthMainAttackDamage"
+    },
+    {
+      "id": 74,
+      "key": "rawEarthSpellDamage"
+    },
+    {
+      "id": 75,
+      "key": "rawElementalDamage"
+    },
+    {
+      "id": 76,
+      "key": "rawElementalMainAttackDamage"
+    },
+    {
+      "id": 77,
+      "key": "rawElementalSpellDamage"
+    },
+    {
+      "id": 78,
+      "key": "rawFireDamage"
+    },
+    {
+      "id": 79,
+      "key": "rawFireMainAttackDamage"
+    },
+    {
+      "id": 80,
+      "key": "rawFireSpellDamage"
+    },
+    {
+      "id": 81,
+      "key": "rawHealth"
+    },
+    {
+      "id": 82,
+      "key": "rawIntelligence"
+    },
+    {
+      "id": 83,
+      "key": "rawMainAttackDamage"
+    },
+    {
+      "id": 84,
+      "key": "rawMaxMana"
+    },
+    {
+      "id": 85,
+      "key": "rawNeutralDamage"
+    },
+    {
+      "id": 86,
+      "key": "rawNeutralMainAttackDamage"
+    },
+    {
+      "id": 87,
+      "key": "rawNeutralSpellDamage"
+    },
+    {
+      "id": 88,
+      "key": "rawSpellDamage"
+    },
+    {
+      "id": 89,
+      "key": "rawStrength"
+    },
+    {
+      "id": 90,
+      "key": "rawThunderDamage"
+    },
+    {
+      "id": 91,
+      "key": "rawThunderMainAttackDamage"
+    },
+    {
+      "id": 92,
+      "key": "rawThunderSpellDamage"
+    },
+    {
+      "id": 93,
+      "key": "rawWaterDamage"
+    },
+    {
+      "id": 94,
+      "key": "rawWaterMainAttackDamage"
+    },
+    {
+      "id": 95,
+      "key": "rawWaterSpellDamage"
+    },
+    {
+      "id": 96,
+      "key": "reflection"
+    },
+    {
+      "id": 97,
+      "key": "slowEnemy"
+    },
+    {
+      "id": 98,
+      "key": "spellDamage"
+    },
+    {
+      "id": 99,
+      "key": "sprint"
+    },
+    {
+      "id": 100,
+      "key": "sprintRegen"
+    },
+    {
+      "id": 101,
+      "key": "stealing"
+    },
+    {
+      "id": 102,
+      "key": "strength"
+    },
+    {
+      "id": 103,
+      "key": "thorns"
+    },
+    {
+      "id": 104,
+      "key": "thunderDamage"
+    },
+    {
+      "id": 105,
+      "key": "thunderDefence"
+    },
+    {
+      "id": 106,
+      "key": "thunderMainAttackDamage"
+    },
+    {
+      "id": 107,
+      "key": "thunderSpellDamage"
+    },
+    {
+      "id": 108,
+      "key": "walkSpeed"
+    },
+    {
+      "id": 109,
+      "key": "waterDamage"
+    },
+    {
+      "id": 110,
+      "key": "waterDefence"
+    },
+    {
+      "id": 111,
+      "key": "waterSpellDamage"
+    },
+    {
+      "id": 112,
+      "key": "weakenEnemy"
+    },
+    {
+      "id": 113,
+      "key": "xpBonus"
+    }
+  ]
 }
