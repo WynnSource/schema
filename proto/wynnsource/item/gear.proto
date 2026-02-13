@@ -69,7 +69,7 @@ message CraftedGear {
   wynnsource.common.CraftedMeta meta = 1;
   wynnsource.common.Durability durability = 2;
 
-  repeated wynnsource.common.Identification identifications = 3;
+  repeated wynnsource.common.CraftedIdentification identifications = 3;
   repeated wynnsource.common.PowderSlot powders = 4;
 }
 
