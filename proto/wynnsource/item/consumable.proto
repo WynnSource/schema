@@ -1,17 +1,25 @@
-syntax = "proto3";
+edition = "2023";
 package wynnsource.item;
 
 import "wynnsource/common/components.proto";
+import "wynnsource/common/enums.proto";
+
+option java_package = "fyw.fyi.wynnsource.schema.item";
 
 message ConsumableCharge {
   int32 current = 1;
   int32 max = 2;
 }
 
+message ConsumableEffect {
+  uint32 id = 1;
+  int32 current_val = 2;
+  int32 duration = 3;
+}
+
 message Consumable {
-  int32 level = 1;
-  int32 duration = 2;
-  ConsumableCharge charge = 3;
+  int32 duration = 1;
+  ConsumableCharge charge = 2;
 
   oneof subtype {
     CraftedConsumable crafted = 10;
@@ -19,6 +27,7 @@ message Consumable {
     ManaPotion mana_potion = 12;
     XpPotion xp_potion = 13;
     StatPotion stat_potion = 14;
+    FixedConsumable fixed = 15;
   }
 }
 
@@ -35,16 +44,23 @@ message XpPotion {
 }
 
 message StatPotion {
-  repeated wynnsource.common.Identification effects = 1;
+  wynnsource.common.Element element = 1;
+  repeated ConsumableEffect effects = 2;
+}
+
+enum CraftedConsumableType {
+  CRAFTED_CONSUMABLE_TYPE_UNSPECIFIED = 0;
+  CRAFTED_CONSUMABLE_TYPE_POTION = 1;
+  CRAFTED_CONSUMABLE_TYPE_FOOD = 2;
+  CRAFTED_CONSUMABLE_TYPE_SCROLL = 3;
 }
 
 message CraftedConsumable {
   wynnsource.common.CraftedMeta meta = 1;
-  repeated wynnsource.common.Identification effects = 2;
+  CraftedConsumableType crafted_consumable_type = 2;
+  repeated ConsumableEffect effects = 3;
+}
 
-  // oneof subtype {
-  //   PotionConsumable potion = 10;
-  //   FoodConsumable food = 11;
-  //   ScrollConsumable scroll = 12;
-  // }
+message FixedConsumable {
+  repeated ConsumableEffect effects = 1;
 }

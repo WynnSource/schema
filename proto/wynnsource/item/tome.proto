@@ -1,0 +1,22 @@
+edition = "2023";
+package wynnsource.item;
+
+import "wynnsource/common/components.proto";
+
+option java_package = "fyw.fyi.wynnsource.schema.item";
+
+enum TomeSlot {
+  TOME_SLOT_UNSPECIFIED = 0;
+  TOME_SLOT_ARMOUR = 1;
+  TOME_SLOT_WEAPON = 2;
+  TOME_SLOT_EXPERTISE = 3;
+  TOME_SLOT_MARATHON = 4;
+  TOME_SLOT_MYSTICISM = 5;
+  TOME_SLOT_LOOTRUN = 6;
+  TOME_SLOT_GUILD = 7;
+}
+
+message Tome {
+  TomeSlot slot = 1;
+  repeated wynnsource.common.Identification identifications = 2;
+}

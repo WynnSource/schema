@@ -1,0 +1,12 @@
+edition = "2023";
+package wynnsource.item;
+
+import "wynnsource/common/components.proto";
+import "wynnsource/common/enums.proto";
+
+option java_package = "fyw.fyi.wynnsource.schema.item";
+
+message CrafterBag {
+  wynnsource.common.IngredientRarity rarity = 1;
+  wynnsource.common.Raid drop_raid = 2;
+}

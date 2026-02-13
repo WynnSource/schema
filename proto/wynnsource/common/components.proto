@@ -1,7 +1,9 @@
-syntax = "proto3";
+edition = "2023";
 package wynnsource.common;
 
 import "wynnsource/common/enums.proto";
+
+option java_package = "fyw.fyi.wynnsource.schema.common";
 
 message DamageRange {
   Element element = 1;
@@ -15,10 +17,23 @@ message Defense {
 }
 
 message Identification {
-  string id = 1;
+  uint32 id = 1;
   int32 base_val = 2;
-  int32 roll = 3;
-  int32 final_val = 4;
+  // The percentage roll of the identification, multiplied by 10,000.
+  // For example, a 75.32% roll would be represented as 7532.
+  int32 roll_10k = 3;
+}
+
+message CraftedIdentification {
+  uint32 id = 1;
+  int32 current_val = 2;
+  int32 max_val = 3;
+}
+
+message CraftedEffect {
+  uint32 id = 1;
+  int32 min_val = 2;
+  int32 max_val = 3;
 }
 
 message Requirements {
@@ -37,11 +52,11 @@ message Powder {
 }
 
 message PowderSlot {
-  optional Powder powder = 1;
+  Powder powder = 1 [features.field_presence = EXPLICIT];
 }
 
 message Shiny {
-  string id = 1;
+  uint32 id = 1;
   int32 value = 2;
   int32 roll = 3;
 }

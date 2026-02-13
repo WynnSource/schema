@@ -1,0 +1,21 @@
+edition = "2023";
+package wynnsource.item;
+
+option java_package = "fyw.fyi.wynnsource.schema.item";
+
+enum MaterialType {
+  MATERIAL_TYPE_UNSPECIFIED = 0;
+  MATERIAL_TYPE_INGOT = 1;
+  MATERIAL_TYPE_GEM = 2;
+  MATERIAL_TYPE_WOOD = 3;
+  MATERIAL_TYPE_PAPER = 4;
+  MATERIAL_TYPE_STRING = 5;
+  MATERIAL_TYPE_GRAIN = 6;
+  MATERIAL_TYPE_OIL = 7;
+  MATERIAL_TYPE_MEAT = 8;
+}
+
+message Material {
+  int32 level = 1;
+  MaterialType type = 2;
+}

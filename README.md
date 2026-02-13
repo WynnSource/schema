@@ -4,39 +4,43 @@ This is a definition for how each item in WynnCraft is represented in our data s
 We will describe the schema in `protobuf` which can be used to generate library for multiple languages.
 
 ## Supported Item Types
-- [ ] Gears
-  - [ ] IdentifiedGear
-  - [ ] UnidentifiedGear
-  - [ ] CraftedGear
-- [ ] Consumables
-  - [ ] Crafted
-    - [ ] Potion
-    - [ ] Food
-    - [ ] Scroll
-  - [ ] NonCrafted
-    - [ ] Potion
-- [ ] Material
-- [ ] Ingredient
-- [ ] Tome
-- [ ] Charm
-- [ ] Aspect
-- [ ] Rune
-- [ ] DungeonKey
-- [ ] CrafterBag
-- [ ] Trinket
-- [ ] Mounts
-  - [ ] Horse
-- [ ] TeleportationScroll
-- [ ] Corkians
-  - [ ] CorkianAmplifier
-  - [ ] CorkianSimulator
-  - [ ] CorkianInsulator
-- [ ] Emeralds
-  - [ ] LiquidEmerald
-  - [ ] EmeraldBlock
-  - [ ] Emerald
-- [ ] EmeraldPouch
-- [ ] NamedItem (e.g. Quest Items, Ability Shards, etc.)
+- [x] Gears
+  - [x] IdentifiedGear
+  - [x] UnidentifiedGear
+  - [x] CraftedGear
+- [x] Consumables
+  - [x] Crafted
+    - [x] Potion
+    - [x] Food
+    - [x] Scroll
+  - [x] NonCrafted
+    - [x] Potion
+    - [x] FixedConsumable (e.g. Speed Surge)
+- [x] Material
+- [x] Ingredient
+- [x] Tome
+- [x] Charm
+- [x] Aspect
+- [x] Rune
+- [x] DungeonKey
+- [x] CrafterBag
+- [x] Trinket
+- [x] Mounts
+  - [x] Horse
+- [x] TeleportationScroll
+- [x] Corkians
+  - [x] CorkianAmplifier
+  - [x] CorkianSimulator
+  - [x] CorkianInsulator
+- [x] Emeralds
+  - [x] LiquidEmerald
+  - [x] EmeraldBlock
+  - [x] Emerald
+- [x] EmeraldPouch
+- [x] NamedItem (e.g. Quest Items, Ability Shards, etc.)
 
 
-## Contribution
+## Mappings
+
+[Identification Mapping]()
+[Shiny Mapping]()

@@ -1,30 +1,45 @@
-syntax = "proto3";
+edition = "2023";
 package wynnsource.item;
 
 import "wynnsource/common/components.proto";
 import "wynnsource/common/enums.proto";
 
-message Gear {
-  enum GearType {
-    // Weapons
-    SPEAR = 0;
-    BOW = 1;
-    WAND = 2;
-    DAGGER = 3;
-    RELIK = 4;
-    // Armors
-    HELMET = 5;
-    CHESTPLATE = 6;
-    LEGGINGS = 7;
-    BOOTS = 8;
-    // Accessories
-    RING = 9;
-    BRACELET = 10;
-    NECKLACE = 11;
-  }
+option java_package = "fyw.fyi.wynnsource.schema.item";
 
+enum GearType {
+  GEAR_TYPE_UNSPECIFIED = 0;
+  // Weapons
+  GEAR_TYPE_SPEAR = 1;
+  GEAR_TYPE_BOW = 2;
+  GEAR_TYPE_WAND = 3;
+  GEAR_TYPE_DAGGER = 4;
+  GEAR_TYPE_RELIK = 5;
+  // Armors
+  GEAR_TYPE_HELMET = 6;
+  GEAR_TYPE_CHESTPLATE = 7;
+  GEAR_TYPE_LEGGINGS = 8;
+  GEAR_TYPE_BOOTS = 9;
+  // Accessories
+  GEAR_TYPE_RING = 10;
+  GEAR_TYPE_BRACELET = 11;
+  GEAR_TYPE_NECKLACE = 12;
+}
+
+enum AttackSpeed {
+  ATTACK_SPEED_UNSPECIFIED = 0;
+  ATTACK_SPEED_SUPER_FAST = 1;
+  ATTACK_SPEED_VERY_FAST = 2;
+  ATTACK_SPEED_FAST = 3;
+  ATTACK_SPEED_NORMAL = 4;
+  ATTACK_SPEED_SLOW = 5;
+  ATTACK_SPEED_VERY_SLOW = 6;
+  ATTACK_SPEED_SUPER_SLOW = 7;
+}
+
+message Gear {
   GearType type = 1;
   wynnsource.common.Requirements requirements = 2;
+  wynnsource.common.ClassType class_type = 3;
 
   oneof state {
     UnidentifiedGear unidentified = 10;
@@ -59,7 +74,7 @@ message CraftedGear {
 }
 
 message WeaponStats {
-  wynnsource.common.AttackSpeed attack_speed = 1;
+  AttackSpeed attack_speed = 1;
   repeated wynnsource.common.DamageRange damages = 2;
 }
 

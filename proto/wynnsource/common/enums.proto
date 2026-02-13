@@ -1,43 +1,66 @@
-syntax = "proto3";
+edition = "2023";
 
 package wynnsource.common;
 
+option java_package = "fyw.fyi.wynnsource.schema.common";
+
 enum Rarity {
-  NONE = 0;
-  COMMON = 1;
-  UNIQUE = 2;
-  RARE = 3;
-  LEGENDARY = 4;
-  FABLED = 5;
-  MYTHIC = 6;
-  SET = 7; // Will get deprecated in future updates
-  CRAFTED = 8;
+  RARITY_UNSPECIFIED = 0;
+  RARITY_NONE = 1;
+  RARITY_COMMON = 2;
+  RARITY_UNIQUE = 3;
+  RARITY_RARE = 4;
+  RARITY_LEGENDARY = 5;
+  RARITY_FABLED = 6;
+  RARITY_MYTHIC = 7;
+  RARITY_SET = 8; // Will get deprecated in future updates
+  RARITY_CRAFTED = 9;
 }
 
 enum Element {
-  NEUTRAL = 0;
-  EARTH = 1;
-  THUNDER = 2;
-  WATER = 3;
-  FIRE = 4;
-  AIR = 5;
+  ELEMENT_UNSPECIFIED = 0;
+  ELEMENT_NEUTRAL = 1;
+  ELEMENT_EARTH = 2;
+  ELEMENT_THUNDER = 3;
+  ELEMENT_WATER = 4;
+  ELEMENT_FIRE = 5;
+  ELEMENT_AIR = 6;
 }
 
 enum ClassType {
-  ANY = 0;
-  WARRIOR = 1;
-  MAGE = 2;
-  ARCHER = 3;
-  ASSASSIN = 4;
-  SHAMAN = 5;
+  CLASS_TYPE_UNSPECIFIED = 0;
+  CLASS_TYPE_ANY = 1;
+  CLASS_TYPE_WARRIOR = 2;
+  CLASS_TYPE_MAGE = 3;
+  CLASS_TYPE_ARCHER = 4;
+  CLASS_TYPE_ASSASSIN = 5;
+  CLASS_TYPE_SHAMAN = 6;
 }
 
-enum AttackSpeed {
-  SUPER_FAST = 0;
-  VERY_FAST = 1;
-  FAST = 2;
-  NORMAL = 3;
-  SLOW = 4;
-  VERY_SLOW = 5;
-  SUPER_SLOW = 6;
+enum Profession {
+  PROFESSION_UNSPECIFIED = 0;
+  PROFESSION_ARMOURING = 1;
+  PROFESSION_TAILORING = 2;
+  PROFESSION_JEWELING = 3;
+  PROFESSION_WEAPONSMITHING = 4;
+  PROFESSION_WOODWORKING = 5;
+  PROFESSION_ALCHEMISM = 6;
+  PROFESSION_SCRIBING = 7;
+  PROFESSION_COOKING = 8;
+}
+
+enum Raid {
+  RAID_UNSPECIFIED = 0;
+  RAID_NOTG = 1;
+  RAID_NOL = 2;
+  RAID_TCC = 3;
+  RAID_TNA = 4;
+}
+
+enum IngredientRarity {
+  INGREDIENT_RARITY_UNSPECIFIED = 0;
+  INGREDIENT_RARITY_0 = 1;
+  INGREDIENT_RARITY_1 = 2;
+  INGREDIENT_RARITY_2 = 3;
+  INGREDIENT_RARITY_3 = 4;
 }

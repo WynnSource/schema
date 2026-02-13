@@ -1,0 +1,45 @@
+edition = "2023";
+package wynnsource;
+
+import "wynnsource/common/enums.proto";
+import "wynnsource/item/aspect.proto";
+import "wynnsource/item/charm.proto";
+import "wynnsource/item/consumable.proto";
+import "wynnsource/item/corkian_modifier.proto";
+import "wynnsource/item/crafter_bag.proto";
+import "wynnsource/item/emerald.proto";
+import "wynnsource/item/gear.proto";
+import "wynnsource/item/ingredient.proto";
+import "wynnsource/item/material.proto";
+import "wynnsource/item/misc.proto";
+import "wynnsource/item/mount.proto";
+import "wynnsource/item/tome.proto";
+
+option java_package = "fyw.fyi.wynnsource.schema";
+
+message WynnSourceItem {
+  string name = 1;
+  uint32 count = 2;
+  uint32 level = 3;
+  wynnsource.common.Rarity rarity = 4;
+
+  oneof data {
+    wynnsource.item.Gear gear = 10;
+    wynnsource.item.Consumable consumable = 11;
+    wynnsource.item.Material material = 12;
+    wynnsource.item.Ingredient ingredient = 13;
+    wynnsource.item.Tome tome = 14;
+    wynnsource.item.Charm charm = 15;
+    wynnsource.item.Aspect aspect = 16;
+    wynnsource.item.Rune rune = 17;
+    wynnsource.item.DungeonKey dungeon_key = 18;
+    wynnsource.item.CrafterBag crafter_bag = 19;
+    wynnsource.item.Trinket trinket = 20;
+    wynnsource.item.Mount mount = 21;
+    wynnsource.item.TeleportScroll teleport_scroll = 22;
+    wynnsource.item.CorkianModifier corkian_modifier = 23;
+    wynnsource.item.Emerald emerald = 24;
+    wynnsource.item.EmeraldPouch emerald_pouch = 25;
+    wynnsource.item.Named named = 26;
+  }
+}

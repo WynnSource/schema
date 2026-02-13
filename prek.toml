@@ -1,0 +1,5 @@
+[[repos]]
+repo = "local"
+hooks = [
+    { id = "buf breaking", name = "Buf Breaking Change Detection", language = "system", entry = "buf breaking . --against .git#branch=main", pass_filenames = false, fail_fast = true },
+]

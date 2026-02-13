@@ -1,0 +1,18 @@
+edition = "2023";
+package wynnsource.item;
+
+import "wynnsource/common/components.proto";
+import "wynnsource/common/enums.proto";
+
+option java_package = "fyw.fyi.wynnsource.schema.item";
+
+enum CorkianModifierType {
+  CORKIAN_MODIFIER_TYPE_UNSPECIFIED = 0;
+  CORKIAN_MODIFIER_TYPE_AMPLIFIER = 1;
+  CORKIAN_MODIFIER_TYPE_SIMULATOR = 2;
+  CORKIAN_MODIFIER_TYPE_INSULATOR = 3;
+}
+
+message CorkianModifier {
+  CorkianModifierType type = 1;
+}
