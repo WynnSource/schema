@@ -1,7 +1,7 @@
 syntax = "proto3";
-package wynn.common;
+package wynnsource.common;
 
-import "wynn/common/enums.proto";
+import "wynnsource/common/enums.proto";
 
 message DamageRange {
   Element element = 1;
@@ -37,12 +37,21 @@ message Powder {
 }
 
 message PowderSlot {
-  bool active = 1;
-  Powder powder = 2;
+  optional Powder powder = 1;
 }
 
 message Shiny {
   string id = 1;
   int32 value = 2;
   int32 roll = 3;
+}
+
+message CraftedMeta {
+  string author = 1;
+  string lore = 2;
+}
+
+message Durability {
+  int32 current = 1;
+  int32 max = 2;
 }

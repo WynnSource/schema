@@ -2,7 +2,6 @@
 version: v2
 modules:
   - path: proto
-    name: buf.build/wynnsource/schema
 lint:
   use:
     - BASIC

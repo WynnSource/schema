@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package wynn.common;
+package wynnsource.common;
 
 enum Rarity {
   NONE = 0;
@@ -10,7 +10,7 @@ enum Rarity {
   LEGENDARY = 4;
   FABLED = 5;
   MYTHIC = 6;
-  SET = 7; // Will get deleted in future updates
+  SET = 7; // Will get deprecated in future updates
   CRAFTED = 8;
 }
 
