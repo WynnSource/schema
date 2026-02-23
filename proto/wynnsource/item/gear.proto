@@ -2,7 +2,6 @@ edition = "2023";
 package wynnsource.item;
 
 import "wynnsource/common/components.proto";
-import "wynnsource/common/enums.proto";
 
 option java_package = "fyw.fyi.wynnsource.schema.item";
 
@@ -36,10 +35,14 @@ enum AttackSpeed {
   ATTACK_SPEED_SUPER_SLOW = 7;
 }
 
+message UnidentifiedGearBox {
+  GearType type = 1;
+  wynnsource.common.LevelRange level_range = 2;
+}
+
 message Gear {
   GearType type = 1;
   wynnsource.common.Requirements requirements = 2;
-  wynnsource.common.ClassType class_type = 3;
 
   oneof state {
     UnidentifiedGear unidentified = 10;
@@ -55,6 +58,7 @@ message Gear {
 
 message UnidentifiedGear {
   repeated wynnsource.common.Identification identifications = 1;
+  wynnsource.common.Shiny shiny = 2;
 }
 
 message IdentifiedGear {

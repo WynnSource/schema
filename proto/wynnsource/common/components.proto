@@ -11,6 +11,11 @@ message DamageRange {
   int32 max = 3;
 }
 
+message LevelRange {
+  int32 min = 1;
+  int32 max = 2;
+}
+
 message Defense {
   Element element = 1;
   int32 value = 2;

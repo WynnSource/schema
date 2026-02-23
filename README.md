@@ -38,6 +38,7 @@ We will describe the schema in `protobuf` which can be used to generate library 
   - [x] Emerald
 - [x] EmeraldPouch
 - [x] NamedItem (e.g. Quest Items, Ability Shards, etc.)
+- [x] UnidentifiedGearBox
 
 
 ## Mappings

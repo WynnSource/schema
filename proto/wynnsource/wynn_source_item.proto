@@ -41,5 +41,6 @@ message WynnSourceItem {
     wynnsource.item.Emerald emerald = 24;
     wynnsource.item.EmeraldPouch emerald_pouch = 25;
     wynnsource.item.Named named = 26;
+    wynnsource.item.UnidentifiedGearBox unidentified_gear_box = 27;
   }
 }
