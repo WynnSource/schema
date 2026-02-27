@@ -43,6 +43,7 @@ message UnidentifiedGearBox {
 message Gear {
   GearType type = 1;
   wynnsource.common.Requirements requirements = 2;
+  string major_id = 3; // To accommodate for unknown majors
 
   oneof state {
     UnidentifiedGear unidentified = 10;
