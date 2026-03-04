@@ -45,6 +45,7 @@ message Gear {
   wynnsource.common.Requirements requirements = 2;
   string major_id = 3; // To accommodate for unknown majors
   string set = 4;
+  repeated wynnsource.common.PowderSlot powders = 5;
 
   oneof state {
     UnidentifiedGear unidentified = 10;
@@ -65,7 +66,6 @@ message UnidentifiedGear {
 
 message IdentifiedGear {
   repeated wynnsource.common.Identification identifications = 1;
-  repeated wynnsource.common.PowderSlot powders = 2;
 
   wynnsource.common.Shiny shiny = 3;
   int32 rerolls = 4;
@@ -76,7 +76,6 @@ message CraftedGear {
   wynnsource.common.Durability durability = 2;
 
   repeated wynnsource.common.CraftedIdentification identifications = 3;
-  repeated wynnsource.common.PowderSlot powders = 4;
 }
 
 message WeaponStats {
