@@ -1,6 +1,6 @@
 {
   "$schema": "./identification.schema.json",
-  "lastUpdated": "2026-02-13T22:33:33Z",
+  "lastUpdated": "2026-04-06T18:17:11Z",
   "data": [
     {
       "id": 0,
@@ -457,6 +457,18 @@
     {
       "id": 113,
       "key": "xpBonus"
+    },
+    {
+      "id": 114,
+      "key": "combatExperience"
+    },
+    {
+      "id": 115,
+      "key": "gatheringExperience"
+    },
+    {
+      "id": 116,
+      "key": "waterMainAttackDamage"
     }
   ]
 }
