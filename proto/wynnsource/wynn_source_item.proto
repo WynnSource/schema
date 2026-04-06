@@ -5,7 +5,7 @@ import "wynnsource/common/enums.proto";
 import "wynnsource/item/aspect.proto";
 import "wynnsource/item/charm.proto";
 import "wynnsource/item/consumable.proto";
-import "wynnsource/item/corkian_modifier.proto";
+import "wynnsource/item/corkian_augments.proto";
 import "wynnsource/item/crafter_bag.proto";
 import "wynnsource/item/emerald.proto";
 import "wynnsource/item/gear.proto";
@@ -37,7 +37,7 @@ message WynnSourceItem {
     wynnsource.item.Trinket trinket = 20;
     wynnsource.item.Mount mount = 21;
     wynnsource.item.TeleportScroll teleport_scroll = 22;
-    wynnsource.item.CorkianModifier corkian_modifier = 23;
+    wynnsource.item.CorkianAugment corkian_augment = 23;
     wynnsource.item.Emerald emerald = 24;
     wynnsource.item.EmeraldPouch emerald_pouch = 25;
     wynnsource.item.Named named = 26;
