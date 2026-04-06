@@ -55,6 +55,7 @@ enum Raid {
   RAID_NOL = 2; // Orphion's Nexus of Light
   RAID_TCC = 3; // The Canyon Colossus
   RAID_TNA = 4; // The Nameless Anomaly
+  RAID_TWP = 5; // The Wartorn Palace
 }
 
 enum IngredientRarity {

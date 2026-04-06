@@ -18,5 +18,8 @@ message TeleportScroll {}
 // No data. Just a marker for Emerald Pouches.
 message EmeraldPouch {}
 
+// No data. Just a marker for wards.
+message Ward {}
+
 // No data. Just a marker for named items.
 message Named {}

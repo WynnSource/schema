@@ -10,13 +10,17 @@ enum MountType {
   MOUNT_TYPE_ADASAUR = 3;
 }
 
-message MountXp {
-  int32 current_xp = 1;
-  int32 current_lvl = 2;
-  int32 max_lvl = 3;
+message MountStats {
+  string stat_name = 1;
+  int32 current = 2;
+  int32 limit = 3;
+  int32 max = 4;
 }
 
 message Mount {
   MountType mount_type = 1;
-  MountXp xp = 2;
+  int32 potency = 2;
+  string color = 3;
+
+  repeated MountStats stats = 11;
 }
