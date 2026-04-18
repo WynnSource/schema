@@ -81,6 +81,7 @@ message CraftedGear {
 message WeaponStats {
   AttackSpeed attack_speed = 1;
   repeated wynnsource.common.DamageRange damages = 2;
+  int32 dps = 3;
 }
 
 message ArmorStats {
